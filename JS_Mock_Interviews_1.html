@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.difference between "=="and "===" operators.
+        // Ans:
+        // 1)"==" is the abstract equality comparison operator.(its check only values)
+        // 2)"===" is the strict equality comparison operator.(its check value as well as data type)
+        // --------------------------------------------------------------------------------------------
+        // 2.what is the spread operator?
+        // Ans.
+        // The spread operator is used to expand or spred an iterable or an array.
+        // by using the spread syntax,to copy the items into single array.
+        // ------------------------------------------------------------------------------------------
+
+        // 3.what are the diiference between var,let and const?
+        // Ans.
+        // var:-
+        // 1)The scope of a var variable is functional scope.
+        // 2)It can be updated and re-declared into the scope.
+        // 3)It can be declared without initialization.
+        // 4)It can be accessed without initialization as its default value is “undefined”.
+        // 5)hoisting is supported.
+        // 
+        // let:-
+        // 1)The scope of a let variable is block scope.
+        // 2)It can be updated but cannot be re-declared into the scope.
+        // 3)It can be declared without initialization. 
+        // 4)It cannot be accessed without initialization otherwise it will give ‘referenceError’.
+        // 5)Hoisting is not supported.
+        // 
+        // const:-
+        // 1)The scope of a const variable is block scope.
+        // 2)It cannot be updated or re-declared into the scope.
+        // 3)It cannot be declared without initialization.
+        // 4)It cannot be accessed without initialization, as it cannot be declared without initialization
+        // 5)Hoisting is not supported.
+        // 
+        // 
+        // -----------------------------------------------------------------------------------------
+        // 4.what is execution context?
+        // Ans.
+        // 1) javascript engine creates the global execution context,before start to execute any code.
+        // 2) variable and function that is not inside any function.A new execution context 
+        // gets created on every time a function is called.
+        // 3)declare a variable and function which all ready present in the global execution context.
+        // 4)The environment in which the our code is executed and evaluated .
+       
+        // --------------------------------------------------------------------------------------------
+        
+        // 5.what is meant by First Class Function?
+        // Ans.
+        // first class function,are those function which can be passed as an argument into another function or
+        // can be,returned from another functions,and can be assigned a value to a variable,
+        // they are also called as "first class function."
+        // --------------------------------------------------------------------------------------------
+
+        // 6.what are closures? Give an example of closure.
+        // Ans.
+        // Closure is an action that,is inner function can have access to the outer function variables and parameters,
+        //  as well as all global variables.
+
+        //  const outer_Function=(b)=>{
+        //     var a=10;
+        //     const inner_Function=()=>{
+        //          var sum = a+b; 
+        //          console.log("sum of the values:"+sum);
+        //     }
+        //     inner_Function();
+        // }
+        // outer_Function(5);
+        // ----------------------------------------------------------------------------------------------
+
+        // 7.Explain call(),apply() and bind() methods.Give an Example of call(),apply() and bind().
+        // Ans.
+        // call():-In call method the arguments are passed , as comma separated.
+        // call() method is input format, first is Object calling the function,follwed by the arguments.
+
+
+        // apply():-apply method,arguments are passed in the form of array.its similar to the call
+
+        // bind():- allows,the object to barrow a method from another object without copying.
+        // e.g.
+
+            // let person = {
+            //   name:"mark jukerburg",
+            //   age:30,
+            //   hobby:"painter",
+            //   domain:"HR",
+            //   display:function(con,state){
+            //       console.log(this.name,this.age,this.hobby,this.domain,con,state);
+
+            // }
+
+            
+            // }
+
+            // let displayInfo = function(con,state){
+            //     console.log(this.name,this.age,this.hobby,this.domain,con,state);
+                
+            // }
+
+
+
+            // student.display.call(person,"india","gujrat");
+
+            // displayInfo.apply(person,["india","gujrat"]);
+
+            // var store = displayInfo.bind(person,"india","gujrat");
+            // console.log(store);
+            // -----------------------------------------------------------------------------------------------
+
+
+
+
+
+            
+
+
+        
+    </script>
+    
+</body>
+</html>
