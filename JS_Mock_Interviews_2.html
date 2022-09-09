@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Interviews Second Part</title>
+</head>
+<body>
+    <script>
+    // 1.what is the creation phase and execution phase?
+    // Ans.
+    // 1)creation phase/Memory Allocation phase:-
+    //   -In the first stage memory allocation.
+    //   -All the variables  will get memory but it will not assign the value, 
+    //      it will not initialised the value it will be an undefined.
+    //   -but function will get their value  or at the time of memory allocation.
+
+    // 2)Execution phase:-
+    //    -In the second stage of code execution.
+    //    -variables will get assiged thei value and function will be executed.
+    // -------------------------------------------------------------------------------------------
+    // 2.what are the objects in javascript?
+    // Ans.
+    // objects are the non-primitive datatypes and are used to store multiple data in the form of
+    // key value pairs.
+    // -------------------------------------------------------------------------------------------
+    // 3.what are function constructors?
+    // Ans.
+    // function constructor is kind of regular function to create multiple objects at a time.
+    // when creating a function constructor,it is good practice to keep the first letter of the name,capital.
+    // new keyword is mandatory to be used with function constructor.
+    // 
+    // function Person(name){
+    //     this.name = name;
+    //     this.salary=2000;
+    // }
+    // const store = new Person("John");
+    // console.log(store.name);
+    // -------------------------------------------------------------------------------------------
+    // 4.Explain prototypes?
+    // Ans.
+    // In javascript,every function and object has a property ,named prototype by default. 
+    // A prototype can be used to add, properties and methods to a function constructor.
+    // and obejcts can inherit properties and methods, from a prototype.
+    // -------------------------------------------------------------------------------------------
+    // 5.what is prototype chain?
+    // Ans.
+    // In javascript,every function and object has a property ,named prototype by default. 
+    // A prototype can be used to add, properties and methods to a function constructor.
+    // and obejcts can inherit properties and methods, from a prototype.
+    // Chain:-
+    // The prototype is itself an object,so the prototype will have its own prototype,so this linking with one another 
+    // is called "prototype chain".
+    // The (__proto__)Object prototype then it will reached the final link as null prototype.
+    // -------------------------------------------------------------------------------------------
+    // 6.Given an Example of Inheritance using function constructor
+    // Ans.
+        // const studentInfo={
+        //     name1:"John",
+        //     age:23,
+        //     class:"MCA",
+        //     display:function(){
+        //         // console.log(`student information: ${this.name} , ${this.age}, ${this.class}`);
+        //         return(`student information ${this.name} ${this.age} ${this.class}`);
+                
+        //     }
+        // }
+
+        // const person={
+        //     name:"sammy",
+        //     hobby:"swim"
+        // }
+
+        // person.__proto__= studentInfo;
+
+        // Student.prototype=person;
+
+        
+        // function Student(name){
+        //     this.name = name;
+        //     this.salary=2000;
+        // }
+
+        // const store = new Student("John");
+        // console.log(store.name);
+        
+       
+        // console.log(store.salary);
+
+        // console.log(store.hobby);
+        // console.log(store.display());
+        
+        // console.log(person.name1);
+    
+        // console.log(person.display());
+
+    // -------------------------------------------------------------------------------------------
+    // 7.what are callbacks?
+    // Ans.
+    // A callback function is a function, that is passed as an argument,to another function .  
+    // this technique to allows a,calling a function,to inside another function,as an argument.
+    // -------------------------------------------------------------------------------------------
+    // 8.what is the use of setTimeOut?
+    // Ans.
+    // The setTimeOut() method executes a block of code after, the specified time.the method 
+    // executes the code only once. 
+    // -------------------------------------------------------------------------------------------------
+    // 9.what is the Event Loop and callstack?
+    // Ans.
+    // 1)callstack:-
+    // Execution stack is also called as "callstack".which follows the [LIFO].manner
+    // which is used to store all execution context during code execution .
+
+    // 2)Event Loop:-
+    //  Event Loop is just a guardin who keeps a good communication between callstack and Callback queue.
+    // It checks the callstack is free ,then lets know the callback queue.
+    // then callback queue passes the  (callback function) or (setTimeOut Method) to callstack to be executed.
+    // When all the callback functions are executed then, callstack is out, and global execution context is free.
+    // --------------------------------------------------------------------------------------------------------
+    </script>
+    
+</body>
+</html>
