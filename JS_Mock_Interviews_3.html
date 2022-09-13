@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Interview 3</title>
+</head>
+<body>
+    <script>
+    // 1)what are Promises and why do we need them?
+    // Ans.
+    // Promises are used to handle asynchronous operations in javascript.
+    // They are easy to manage,when dealing with multiple asynchronous operation where callbacks can create callback 
+    // hell leading to unmanageable code .
+    // It also allows us to make API calls or fetch data from Web Serves successfully.
+    // If not able to do so fetches us with an error message. 
+
+    // It have three stages: 
+    // 1.Pending
+    // 2.Resolved(fulfilled)
+    // 3.Reject
+
+    // executor function(resolve ,reject)
+
+    // resolve = resolve callback used to resolve the promise with a value or result.
+    // reject = reject callback used to reject the promise with a provided reason or error.
+    // ------------------------------------------------------------------------------------------------------------
+    // 2)what is promise chaining?
+    // Ans.
+    // Promise are useful when, you have to handle more than one asynchronous task,one after another
+ 
+    // const getId = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         let id=[1,2,3,4,5];
+    //         // resolve(id);
+    //         reject("Error in fetching the Details");
+    //     },2000)
+
+    // });
+    // consumer part 
+    // getId.then((data)=>{
+    //     console.log("The data is resolved ",data);
+        
+    // })
+    // getId.catch((error)=>{
+    //     console.log("error");
+        
+    // })
+    // getId.finally(()=>{
+    //     console.log("End of the Promises");
+        
+    // })
+    // ------------------------------------------------------------------------------------------------------------
+
+    // 3)what is the purpose of async/await keywords? Give an Example.
+    // Ans.
+        // They are used to handle promises more efficiently.
+        // we use the async keyword with function to that function represent the is an asychronous function.
+        // these function always returns a Promise.
+        
+
+
+        // await: 
+        // the await keyword is used to,inside the async function,to wait for the promise.
+        // that is to be returned form the,promise.
+        // await is always used with the keyword async.
+
+        // e.g:-1)
+        //  async function getData(){
+        //         console.log("async and await call started...");
+        //             const person={
+        //                 names:"john",
+        //                 age:23,
+        //                 hooby:"swim"
+        //             }
+
+                    
+        //         const just = await person;
+        //         console.log(just);
+        //         console.log(person.names);
+        // }
+        //     console.log("i am first executed");
+        //     getData();
+
+
+
+        // e.g:-2)
+        // let prom = new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve("hey i am resolve function");
+        //     },3000)
+        // })
+
+        // async function so(){
+        //     console.log("hey i am here");
+            
+        
+        //     let result = await prom;
+        //     console.log(result);
+        //     console.log("hello developer");
+            
+            
+        // }
+        // so();
+        
+    // ------------------------------------------------------------------------------------------------------------
+    // 4)what are hoisting?
+    // Ans.
+    // In javascript is a behaviour in which a variable or function can be used before the declaration.
+    // In javascript mechanism where,variable and function declarations are moved to the top of their scope,
+    // before the code execution
+     
+    // ------------------------------------------------------------------------------------------------------------
+    // 5)what is the DOM?
+    // Ans.
+    // when the web page is loaded ,the browser creates a Document Object Model of the page.
+    // it is programming interface that allows us to create,change,or remove elements from the document.
+    // we can also add events,to these elements,to make our page more dynamic.
+
+    // the DOM views an HTML document as a tree nodes.A node represents an HTML elements.
+    // Our document is called  the root node and contains one child node which is the <html> element.
+    // the <html> element contains the two children which are <head> and <body>
+    // Element.both the <head> and <body> elements have their own children.
+    // We can access these elements in the document and make changes to them using Javascript.  
+    // ------------------------------------------------------------------------------------------------------------
+    // 6)Difference between undefined vs not defined vs NaN?
+    // Ans.
+    // 1)undefined:-
+    // An undefined error,is when we declare a variable in the code but do not assign a value to
+    // it before printing the variable.
+            // let x; //we have declared X
+
+            // function runX(){
+            //          return x;
+            // }
+
+            //Since we did not assign x, it prints undefined
+
+            // console.log(runX()); 
+    
+
+    // 2)Not defined:-
+    // A not defined error,is when we did not declare the variable and tried to call that variable.
+
+    //      x is not declared/defined
+    //          function runX(){
+    //              return x;
+    //           }
+
+    //        So we have an error of X is not defined
+    //         console.log(runX())
+
+    // 3)NaN:-
+    // NaN stands for Not a Number.
+    // It represents a value which is valid or not.
+    // ------------------------------------------------------------------------------------------------------------
+    // 7)How many opearators do we have in js?
+    // Ans.
+    // In javascript,an operator is a special symbol used to perform opeartions on operands.
+    // list of different operators :-
+            // 1)Arithmetic operator
+            // 2)Assignment operator
+            // 3)Comparison operator
+            // 4)Logical operator
+            // 5)Bitwise operator
+            // 6)String operator
+    // ------------------------------------------------------------------------------------------------------------
+    // 8)what are pure functions?
+    // Ans.
+    // A Pure function,is function (a block of code) that always returns the same result,if the same arguments are passed.
+    // It does not depend any state or data change,during the code execution.rather,it only depends on its inputs arguments.
+    // e.g:
+    // 
+    //          function calculate(value){
+    //                return value*0.05;
+    //          }
+    //           calculate(3);
+    // ------------------------------------------------------------------------------------------------------------
+    // 9)what is callback hell?
+    // Ans.
+    // callback hell are just name/convention for using for using javascript.
+    // every callback depends/waits for the previous callback ,therby making a pyramid structure ,
+    // that affects the readability and maintainability of the code.if there in error in one function,then all other
+    // functions get affected.  
+    // we should also try to avoid using callback hell.
+    // we uses promises,to prevent using callbacks.
+
+    // ------------------------------------------------------------------------------------------------------------
+    // 10)what are arrow function?
+    // Ans.
+    // Arrow function is one of the feature introduced in the ES6 version of javascript. 
+    // It allows to create a function in a, cleaner way compared to regular functions.
+    // ------------------------------------------------------------------------------------------------------------
+    
+    </script>
+    
+</body>
+</html>
